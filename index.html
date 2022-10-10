@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NASA APOD Viewer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://s2.googleusercontent.com/s2/favicons?domain=www.nasa.gov"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f02a470b1f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Loader -->
+    <div class="loader hidden">
+      <img src="media/rocket-navy-090185.svg" alt="rocket loader" />
+    </div>
+    <!-- Container -->
+    <div class="container">
+      <!-- Navigation -->
+      <div class="navigation-container">
+        <span class="background"><img src="media/nasa-logo.png" alt="NASA Logo" class="nasa-logo"></span>
+        
+        <!-- Results Nav -->
+        <span class="nav-items" id="resultsNav">
+          <h3 class="clickable" onclick="updateDOM('favourites')">
+            Favourites
+          </h3>
+          <h3>
+            &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-meteor"></i
+            >&nbsp;&nbsp;&nbsp;
+          </h3>
+          <h3 class="clickable" onclick="getNasaPictures()">Load More</h3>
+        </span>
+        <!-- Favourites Nav -->
+        <span class="nav-items hidden" id="favouritesNav">
+          <h3 class="clickable" onclick="getNasaPictures()">
+            <i class="fa-solid fa-satellite-dish"></i> Load More APOD Images
+          </h3>
+        </span>
+      </div>
+      <!-- Images Container -->
+      <div class="images-container"></div>
+    </div>
+    <!-- Save Confirmation-->
+    <div class="save-confirmation" hidden>
+      <h1>ADDED</h1>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
