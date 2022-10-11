@@ -1,8 +1,8 @@
 :root {
-  --nasa-blue: rgb(11, 61, 145); 
-  --nasa-red: #FC3D21;
-  --ghost-white: #f8f8ff; 
-  --dark-blue: rgb(11, 11, 95); 
+  --nasa-blue: rgb(11, 61, 145);
+  --nasa-red: #fc3d21;
+  --ghost-white: #f8f8ff;
+  --dark-blue: rgb(11, 11, 95);
 }
 
 html {
@@ -47,7 +47,7 @@ body {
   top: 0;
 }
 
-.nasa-logo {
+.nasa-logo-desktop {
   display: fixed;
   top: 10px;
   left: 10px;
@@ -62,7 +62,7 @@ body {
 }
 
 .background {
-  background: var(--dark-blue); 
+  background: var(--dark-blue);
   position: fixed;
   right: 0;
   width: 100%;
@@ -85,7 +85,7 @@ body {
 }
 
 .card {
-  background: white;
+  background: var(--ghost-white);
   margin: 10px 10px 20px;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -115,8 +115,38 @@ body {
   color: var(--dark-blue);
 }
 
+/* Footer */
+.footer {
+  background: var(--dark-blue);
+  bottom: 0;
+  color: var(--ghost-white);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  padding: 2px;
+  text-align: center;
+  width: 100%;
+}
+
+.socials {
+  color: var(--ghost-white);
+}
+
 /* Save Confirmation */
 .save-confirmation {
+  background: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  position: fixed;
+  bottom: 25px;
+  right: 50px;
+  font-family: "Major Mono Display", monospace;
+}
+
+/* Remove Confirmation */
+.remove-confirmation {
   background: white;
   padding: 8px 16px;
   border-radius: 5px;
@@ -141,6 +171,17 @@ body {
     text-align: justify;
   }
 
+  /* Mobile Nav Bar */
+
+  .navigation-container {
+    position: fixed;
+    top: 0;
+  }
+  .nasa-logo-desktop {
+    display: none;
+  }
+
+  /* Mobile Cards*/
   .images-container {
     width: 100%;
   }
@@ -150,6 +191,10 @@ body {
   }
 
   .save-confirmation {
+    right: 25px;
+  }
+
+  .remove-confirmation {
     right: 25px;
   }
 }
