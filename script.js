@@ -2,6 +2,7 @@ const resultsNav = document.getElementById("resultsNav");
 const favouritesNav = document.getElementById("favouritesNav");
 const imagesContainer = document.querySelector(".images-container");
 const saveConfirmation = document.querySelector(".save-confirmation");
+const removeConfirmation = document.querySelector(".remove-confirmation");
 const loader = document.querySelector(".loader");
 
 // NASA API
@@ -134,6 +135,11 @@ function saveFavourite(itemUrl) {
 function removeFavourite(itemUrl) {
   if (favourites[itemUrl]) {
     delete favourites[itemUrl];
+    // Show Remove Confirmation (2s)
+    removeConfirmation.hidden = false;
+    setTimeout(() => {
+      removeConfirmation.hidden = true;
+    }, 2000);
     // Set Favourites in localStorage
     localStorage.setItem("apodFavourites", JSON.stringify(favourites));
     updateDOM("favourites");
