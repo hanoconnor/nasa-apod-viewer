@@ -30,8 +30,13 @@
     <div class="container">
       <!-- Navigation -->
       <div class="navigation-container">
-        <span class="background"><img src="media/nasa-logo.png" alt="NASA Logo" class="nasa-logo"></span>
-        
+        <span class="background"
+          ><img
+            src="media/nasa-logo.png"
+            alt="NASA Logo"
+            class="nasa-logo-desktop"
+        /></span>
+
         <!-- Results Nav -->
         <span class="nav-items" id="resultsNav">
           <h3 class="clickable" onclick="updateDOM('favourites')">
@@ -53,10 +58,30 @@
       <!-- Images Container -->
       <div class="images-container"></div>
     </div>
+
     <!-- Save Confirmation-->
     <div class="save-confirmation" hidden>
       <h1>ADDED</h1>
     </div>
+
+    <!-- Remove Image Confirmation-->
+    <div class="remove-confirmation" hidden>
+      <h1>REMOVED</h1>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p class="footer-text">
+        Developed by Hannah O'Connor
+        <a
+          href="https://github.com/hanoconnor"
+          target="_blank"
+          class="clickable socials"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+      </p>
+    </div>
+
     <!-- Script -->
     <script src="script.js"></script>
   </body>
